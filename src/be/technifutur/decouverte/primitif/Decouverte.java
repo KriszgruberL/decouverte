@@ -17,15 +17,38 @@ public class Decouverte {
     }
 
     private static void testDouble() {
+        double test= 5.3;
+        System.out.println("to " + test / 0 + " and beyond");
+        System.out.println("division par 0 " + (0.0/0.0));
+        System.out.println((test/0)/2);
+
+        test = Long.MAX_VALUE;
+
+        for (int i = 0; i < 200; i++) {
+            test -= 1000;
+            long l = (long)test;
+            System.out.printf("double : %s long : %s %n", test,l);
+        }
     }
 
     private static void testFloat() {
+        float test = 5.3f;
     }
 
     private static void testChar() {
+        char car = 'r';             //peut être considerer comme un entier en 16 bit
+        char car2 = 'a';
+        int res = car + car2;
+        System.out.println(res);    //resultat 211 aka la valeur ASCII de r et a additionnée
+        car = '\n';                 //carriage return, passe à la ligne
+
     }
 
     private static void testLong() {
+        long test = Long.MAX_VALUE; // millard de millard
+        test = 9_223_372_036_854_775_807L;
+        int val = 5;
+        test = test - val; //long - int => long - long
     }
 
     private static void testInteger() {
@@ -40,16 +63,17 @@ public class Decouverte {
         test = test % test2; // modulo
         test %= test2;
 
+
         //écriture en binaire
         test = 0b00110; // 6
         System.out.println("0b00110 = "+ test ); // 6
-        System.out.println("test & test2 " + (test & test2)); // 2
-        System.out.println("test | test2 " + (test | test2)); // 7
-        System.out.println("test ^ test2 " + (test ^ test2)); // 5 // xor
-        System.out.println("~test +1 =" + (~test + 1 ));// -6 fait le complément (change les 1 en 0 et inversement)
+        System.out.println("test & test2 " + (test & test2)); // 2                                                      car 00110 & 00010 = 00010
+        System.out.println("test | test2 " + (test | test2)); // 7 | = or                                               car 00110 & 00010 = 00111
+        System.out.println("test ^ test2 " + (test ^ test2)); // 5 // xor                                               car 00110 & 00010 = 00101
+        System.out.println("~test +1 =" + (~test + 1 ));// -6 fait le complément (change les 1 en 0 et inversement)     car ~00110 = 11001
 
-        System.out.println("test << 2 = " + (test << 2)); // 24 (décalage de bits vers la gauche)
-        System.out.println("test >> 2 = " + (test >> 2)); // 1 (décalage de bits vers la droite) // propage le bit de signe
+        System.out.println("test << 2 = " + (test << 2)); // 24 (décalage de bits vers la gauche)                       car 00110 = 11000
+        System.out.println("test >> 2 = " + (test >> 2)); // 1 (décalage de bits vers la droite) // propage le bit de signe car 00110 = 00001
         System.out.println("test >>> 2 = " + (test >>> 2)); //
 
         test = -6;
@@ -58,6 +82,8 @@ public class Decouverte {
         System.out.println("test >>> 2 = " + (test >>> 2)); // 1073741822 // ne propage pas le bit de signe
 
         System.out.println(Integer.toBinaryString(test));
+
+        Integer.bitCount(test);
     }
 
     private static void testShort() {
