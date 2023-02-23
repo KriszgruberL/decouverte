@@ -3,8 +3,12 @@ package be.technifutur.decouverte.array;
 import be.technifutur.decouverte.structure.MyDate;
 import be.technifutur.decouverte.structure.Personne;
 
+import java.util.Arrays;
+
 public class ArrayDecouverte {
     public static void main(String[] args) {
+
+
         //tableau en java -> adresse
         int[] tab = new int[56];
         int[] tab2 = tab;
@@ -71,12 +75,12 @@ public class ArrayDecouverte {
         nais.mois = 6;
         nais.an = 2000;
 
-        for (Personne p : groupe){
+        for (Personne p : groupe) {
             p.naissance = nais;
         }
         System.out.println("----------------------");
 
-        for (Personne p : groupe){
+        for (Personne p : groupe) {
             System.out.printf("%s %s : %s/%s/%s%n",
                     p.nom,
                     p.prenom,
@@ -86,6 +90,11 @@ public class ArrayDecouverte {
             );
         }
 
+        Arrays.toString(tab4); // change les élements d'un tableau en string
+        System.out.println(Arrays.toString(tab4));
+
+        Arrays.deepToString(tab2d2);
+        System.out.println(Arrays.deepToString(tab2d2));
 
     }
 }
