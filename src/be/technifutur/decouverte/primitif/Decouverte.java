@@ -24,11 +24,11 @@ public class Decouverte {
 
         test = Long.MAX_VALUE;
 
-        for (int i = 0; i < 200; i++) {
-            test -= 1000;
-            long l = (long)test;
-            System.out.printf("double : %s long : %s %n", test,l);
-        }
+//        for (int i = 0; i < 200; i++) {
+//            test -= 1000;
+//            long l = (long)test;
+//            System.out.printf("double : %s long : %s %n", test,l);
+//        }
     }
 
     private static void testFloat() {
