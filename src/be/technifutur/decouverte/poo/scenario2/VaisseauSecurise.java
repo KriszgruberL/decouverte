@@ -45,7 +45,7 @@ public class VaisseauSecurise {
             System.out.println("Pan!");
             this.nbMissile--;
         } else {
-            System.out.println("Pouf...");
+            System.out.println("Well shit...");
         }
     }
 

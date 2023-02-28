@@ -10,4 +10,9 @@ public class Millenium extends VaisseauAncetre {
             super.tirer(); // super pronom qui contient l'adresse de l'ancetre
         }
     }
+
+    @Override
+    public void afficheCamp() {
+        System.out.println("Allégence = There is no war in Ba Sing Sei");
+    }
 }

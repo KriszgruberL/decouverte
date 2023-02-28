@@ -1,6 +1,6 @@
 package be.technifutur.decouverte.poo.scenario3;
 
-public class VaisseauAncetre {
+public abstract class VaisseauAncetre {
     //variables d'instances contiennent l'état de l'objet
     // initialisée par défaut à la valeur par défaut du type
     private String nom = "BarbeAPapa";
@@ -8,6 +8,7 @@ public class VaisseauAncetre {
     private int maxMissile;
     private boolean up = false;
     private static int nbVolant; //Variable de classe
+
 
     //constructeur
     public VaisseauAncetre(int maxMissile, String nom) {
@@ -45,7 +46,7 @@ public class VaisseauAncetre {
             System.out.println("Pan!");
             this.nbMissile--;
         } else {
-            System.out.println("Pouf...");
+            System.out.println("Well shit, we're out of ammo...");
         }
     }
 
@@ -87,7 +88,7 @@ public class VaisseauAncetre {
     public boolean TouchGrass() {
         if (up) {
             up = false;
-            System.out.println(getNom() + " atterit");
+            System.out.println(getNom() + " atterrit");
             VaisseauAncetre.nbVolant--;
         } else {
             System.out.println(getNom() + " est déjà au sol... ");
@@ -126,6 +127,8 @@ public class VaisseauAncetre {
         result = 31 * result + maxMissile;
         return result;
     }
+
+    public abstract void afficheCamp();
 }
 
 

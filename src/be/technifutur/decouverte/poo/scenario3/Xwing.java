@@ -16,4 +16,9 @@ public class Xwing extends VaisseauAncetre {
         name += j;
         return name;
     }
+
+    @Override
+    public void afficheCamp() {
+        System.out.println("Allégence = Viva la ¡ REVOLUTION~ !");
+    }
 }

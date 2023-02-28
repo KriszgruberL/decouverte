@@ -9,4 +9,9 @@ public class Lukywa extends VaisseauAncetre {
     public void tirer() {
         System.out.println("Pan !");
     }
+
+    @Override
+    public void afficheCamp() {
+        System.out.println("Allégence = MONEY MONEEEEEY $$$$ !");
+    }
 }
