@@ -6,12 +6,14 @@ public class Jedi extends Rebelle implements Force {
     }
 
     @Override
-    public String getCamp() {
-        return null;
+    public void utiliseForce() {
+        System.out.println("Picking up my Laser like a boss");
     }
 
+
     @Override
-    public void utiliseForce() {
+    public void combattre() {
+        System.out.println("Attaquons l'exercice pour défaire les SITHS !");
 
     }
 }

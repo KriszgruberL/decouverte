@@ -9,18 +9,19 @@ package be.technifutur.decouverte.poo.scenario4;
 //    Combattre() "abstract;"
 
 public abstract class Personnage {
-    public Personnage (String nom){
+    private String nom;
 
+    public Personnage(String nom){
+        this.nom = nom;
     }
 
     public String getName(){
+        return this.nom;
     }
 
     public abstract String getCamp();
 
-    public void combattre(){
+    public abstract void combattre();
     }
 
 
-
-}

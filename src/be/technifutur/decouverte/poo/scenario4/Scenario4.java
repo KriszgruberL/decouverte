@@ -11,7 +11,8 @@ public class Scenario4 {
         Force f;
 
         for (Personnage p : pers) {
-            System.out.println(p.getName());
+            System.out.println("-------------------------------");
+            System.out.println(p.getName()); //get nom retourne le nom d'un perso
             System.out.println(p.getCamp());
             if (p instanceof Force) {
                 f = (Force) p;
